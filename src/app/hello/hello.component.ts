@@ -7,7 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HelloComponent implements OnInit {
   isActive = false;
+  email = "hi";
   constructor() { }
+
+  onSave($event) {
+    $event.stopPropagation();
+    console.log("Saved!!", $event)
+  }
+
+  onKeyUp() {
+    console.log(this.email);
+  }
 
   ngOnInit() {
   }
