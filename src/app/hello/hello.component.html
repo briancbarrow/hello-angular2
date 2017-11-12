@@ -1,6 +1,10 @@
 <button class="btn btn-primary" [style.backgroundColor]="isActive ? 'red' : 'yellow'" [class.active]="isActive" (click)="onSave($event)">Hello</button>
 <!-- <input #email (keyup.enter)="onKeyUp(email.value)" /> -->
 <!-- <input [value]="email" (keyup.enter)="email = $event.target.value; onKeyUp()" /> -->
-<input [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
+<input [(ngModel)]="email" (keyup.enter)="onEnter()" />
 
 {{ text | summary:100 }}
+
+<br />
+<input [(ngModel)]="title" />
+{{ title | titleCase}}
